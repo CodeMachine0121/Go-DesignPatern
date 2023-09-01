@@ -21,7 +21,7 @@ func main() {
 	onButton := &buttons.Button{Command: OnCommand}
 	offButton := &buttons.Button{Command: OffCommand}
 
-	onButton.Press()
 	offButton.Press()
+	onButton.Press()
 
 }
