@@ -1,18 +1,17 @@
 package main
 
 import (
-	"builder/Builders"
 	"builder/Directors"
 	"fmt"
 )
 
 func main() {
 
-	builder := Builders.NewConcreteBuilder()
+	builder := Directors.ConcreteBuilder{}
 	director := Directors.NewDirector(&builder)
 	director.Construct()
 
-	product := director.Builder.GetResult()
+	product := builder.GetResult()
 	fmt.Println(product)
 
 }
