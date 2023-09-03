@@ -19,9 +19,10 @@ func main() {
 	}
 
 	onButton := &buttons.Button{Command: OnCommand}
-	offButton := &buttons.Button{Command: OffCommand}
 
-	offButton.Press()
+	offButtonjiera := &buttons.Button{Command: OffCommand}
+
+	offButtonjiera.Press()
 	onButton.Press()
 
 }
