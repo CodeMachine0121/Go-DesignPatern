@@ -9,7 +9,7 @@ func main() {
 
 	proto := prototype.ConcretePrototype{Name: "Concrete Prototype"}
 
-	clone := proto.Clone()
+	clone := proto.Clone("Concrete Prototype Clone")
 
 	fmt.Println("proto: ", proto.GetName())
 	fmt.Println("clone: ", clone.GetName())

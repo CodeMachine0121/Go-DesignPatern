@@ -2,7 +2,7 @@ package prototype
 
 type Prototype interface {
 	GetName() string
-	Clone() Prototype
+	Clone(name string) Prototype
 }
 
 type ConcretePrototype struct {
@@ -11,6 +11,6 @@ type ConcretePrototype struct {
 
 func (p *ConcretePrototype) GetName() string { return p.Name }
 
-func (p *ConcretePrototype) Clone() Prototype {
-	return &ConcretePrototype{p.Name}
+func (p *ConcretePrototype) Clone(name string) Prototype {
+	return &ConcretePrototype{p.Name + " " + name}
 }
