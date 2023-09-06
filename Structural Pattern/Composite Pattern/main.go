@@ -14,8 +14,11 @@ func main() {
 	leaf2 := leaves.NewLeaf(2000)
 	composit.Add(leaf2)
 
-	leaf3 := composites.NewComposite()
-	composit.Add(leaf3)
+	composit2 := composites.NewComposite()
+	composit.Add(composit2)
+
+	leaf3 := leaves.NewLeaf(3)
+	composit2.Add(leaf3)
 
 	composit.Excute()
 }
