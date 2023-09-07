@@ -16,6 +16,11 @@ type LabtopPool struct {
 func InitLabtopPool(notYetFashion []*Labtop) *LabtopPool {
 	return &LabtopPool{NotYetFashion: notYetFashion}
 }
+func (p *LabtopPool) InsertNotYetFashion(labtop *Labtop) {
+	p.Lock()
+	p.NotYetFashion = append(p.NotYetFashion, labtop)
+	p.Unlock()
+}
 
 func (p *LabtopPool) AddToFashionList() {
 	p.Lock()
